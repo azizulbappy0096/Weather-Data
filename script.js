@@ -1,5 +1,5 @@
 const api_key = '38a7c1e1436224ae50b6dcea7bf2249a';
-let date = new Date;
+
 getWeatherData = () => {
     var userInput = document.querySelector('#input').value;
 
@@ -20,8 +20,22 @@ displayData = (response) => {
     document.getElementById('temp').innerText = response.main.temp;
     document.getElementById('max_temp').innerText = response.main.temp_max;
     document.getElementById('min_temp').innerText = response.main.temp_min;
-    document.getElementById('date').innerText = date;
+    
 };
 
+handleSearchByKey = (e) => {
+    if(e.key === 'Enter') {
+        getWeatherData();
+    }
+}
+
+setInterval(() => {
+    let date = new Date;
+    document.getElementById('date').innerText = date;
+}, 1000);
+
 document.getElementById('search').addEventListener('click', getWeatherData);
+document.getElementById('input').addEventListener('keyup', handleSearchByKey);
+
+
 
