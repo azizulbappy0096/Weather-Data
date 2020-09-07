@@ -1,1 +1,56 @@
-sdas
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="./index.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title> Weather Data </title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <h1 class="my-4"> Weather Data </h1>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+                <input id="input" class="form-control" type="text" placeholder="Default input"> 
+                <button id="search" type="submit" class="btn btn-primary mb-2 d-flex mx-auto my-3"> Search </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card text-center">
+                    <div id="location" class="card-header">
+                      ----
+                    </div>
+                    <div class="card-body">
+                      <h5 id="main" class="card-title"> Clear </h5>
+
+                      <p class="card-text"> Temp: <span id="temp">---</span>°K
+                      </p>
+                      <p class="card-text"> Max Temp: <span id="max_temp">---</span>°K
+                      </p>
+                      <p class="card-text"> Min Temp: <span id="min_temp">---</span>°K
+                      </p>
+
+                    </div>
+                    <div id="date" class="card-footer text-muted">
+                      --/--/----
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+        <script src="./script.js"></script>
+  </body>
+</html>
